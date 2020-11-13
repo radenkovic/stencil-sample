@@ -1,4 +1,6 @@
 :host {
   display: block;
-  background: var(--app-primary-color);
+  color: white;
+  padding: 30px;
+  background: var(--blue);
 }

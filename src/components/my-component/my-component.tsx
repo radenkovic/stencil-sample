@@ -28,13 +28,16 @@ export class MyComponent {
   @Prop() changeHandler: any;
 
   private getText(): string {
+    // This will be logged few times, because in index.html I am changing changeHandler, and it triggers re-renders
     console.log('prop', this.first)
     console.log('Callback', this.changeHandler)
     return format(this.first, this.middle, this.last);
   }
 
   render() {
-    return <div>Top Level Component {this.getText()}
+    return <div class="my-component"> This is Top level component (my-component) {this.getText()}
+    <br/>
+    <br/>
     <sub-component></sub-component>
     </div>;
   }

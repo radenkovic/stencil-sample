@@ -1,0 +1,6 @@
+:host {
+  display: block;
+  background: var(--green-light);
+  padding: 30px;
+  margin-top: 5px;
+}

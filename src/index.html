@@ -3,21 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>Stencil Component Sample</title>
 
     <script type="module" src="/build/nylas-stencil.esm.js"></script>
     <script nomodule src="/build/nylas-stencil.js"></script>
-<link rel="stylesheet" href="/build/nylas-stencil.css">
+    <!-- We load custom variables(this is exactly /global/variables.css), also allows user to import their own stylesheet replacing our variables -->
+    <link rel="stylesheet" href="/build/nylas-stencil.css">
+    
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+    <!-- Our components -->
+    <my-component first="Stencil" last="Component"></my-component>
+    <test-component></test-component>
+
+    <p>Lets' reuse sub-component which is included in my-component:</p>
+    <sub-component></sub-component>
+    Awesome! (it's not affected by parent styles)
     
-    <h1>Test Component (2</h1>
-    <test-component />
+    
     <script>
       const el = document.querySelector('my-component');
+      // Here I am modifying changeHandler to check if reactivity works well
       el.changeHandler = () => {
-        console.log('change detected')
+        console.log('first handler')
       }
       setTimeout(() => {
         el.changeHandler = () => {

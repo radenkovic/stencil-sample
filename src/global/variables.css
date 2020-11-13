@@ -1,4 +1,11 @@
-
+/* Here we define custom css variables that can be used in any component */
 :root {
+  font-family: sans-serif;
   --app-primary-color: #488aff;
+
+  --blue:#3f51b5;
+  --blue-light: #6573c3;
+
+  --green: #4caf50;
+  --green-light: #6fbf73;
 }

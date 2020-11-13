@@ -9,6 +9,6 @@ import { Component, h } from '@stencil/core';
 
 export class TestComponent {
     render() {
-        return <div>TEST COMPONENT Content</div>;
+        return <div>This is test component, a sibling of my-component</div>;
     }
 }
