@@ -1,0 +1,5 @@
+:host {
+  display: block;
+  background: green;
+  color: var(--app-primary-color);
+}
